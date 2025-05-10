@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ปลดล็อกความทรงจำ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/unlock.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div class="container">
+    <img src="images/IMG_4021.jpeg" alt="รูปคู่" class="couple-pic" />
+    <h2 class="love-text">I love you &lt;3</h2>
+    <p class="hint">วันครบรอบของเราาา?</p>
+    <p class="hint">เช่น 080724</p>
+
+    <input type="password" id="code-input" readonly maxlength="6" />
+    <div class="keypad">
+      <button class="key" onclick="press(1)">1</button>
+      <button class="key" onclick="press(2)">2</button>
+      <button class="key" onclick="press(3)">3</button>
+      <button class="key" onclick="press(4)">4</button>
+      <button class="key" onclick="press(5)">5</button>
+      <button class="key" onclick="press(6)">6</button>
+      <button class="key" onclick="press(7)">7</button>
+      <button class="key" onclick="press(8)">8</button>
+      <button class="key" onclick="press(9)">9</button>
+      <button class="key" onclick="clearCode()">ลบ</button>
+      <button class="key" onclick="press(0)">0</button>
+      <button class="key" onclick="submitCode()">OK</button>
+    </div>
+  </div>
+  <script src="script/unlock.js"></script>
+</body>
+</html>

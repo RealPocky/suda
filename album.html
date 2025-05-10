@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>อัลบั้มของเรา</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Itim', cursive;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 28px;
+      color: #d63384;
+    }
+
+    .swiper {
+      width: 90%;
+      max-width: 360px;
+      height: auto;
+      margin-top: 30px;
+    }
+
+    .swiper-slide {
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 25px;
+    }
+
+    #final-message {
+      display: none;
+      text-align: center;
+      margin: 30px 0 10px;
+      font-size: 20px;
+      color: #e91e63;
+      max-width: 300px;
+      line-height: 1.5;
+    }
+
+    #nextBtn {
+      display: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #f06292;
+      color: white;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      margin-bottom: 30px;
+    }
+
+    #nextBtn:hover {
+      background-color: #ec407a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>อัลบั้มของเรา 💖</h1>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- ใส่รูปจริงคุณได้ที่นี่ -->
+      <div class="swiper-slide"><img src="img2/1.jpg" alt="1"></div>
+      <div class="swiper-slide"><img src="img2/2.jpg" alt="2"></div>
+      <div class="swiper-slide"><img src="img2/3.jpg" alt="3"></div>
+      <div class="swiper-slide"><img src="img2/4.jpg" alt="4"></div>
+      <div class="swiper-slide"><img src="img2/5.jpg" alt="5"></div>
+      <div class="swiper-slide"><img src="img2/6.jpg" alt="6"></div>
+      <div class="swiper-slide"><img src="img2/7.jpg" alt="7"></div>
+      <div class="swiper-slide"><img src="img2/8.jpg" alt="8"></div>
+      <div class="swiper-slide"><img src="img2/9.jpg" alt="9"></div>
+      <div class="swiper-slide"><img src="img2/10.jpg" alt="9"></div>
+      <div class="swiper-slide"><img src="img2/11.jpg" alt="9"></div>
+      <div class="swiper-slide"><img src="img2/12.jpg" alt="10"></div>
+    </div>
+  </div>
+
+  <div id="final-message">
+    เธอน่ารักทุกรูปเลย 💓<br />
+    สวยที่สุดเลย เค้ารักเธอนะ 🥰
+  </div>
+
+  <button id="nextBtn" onclick="window.location.href='letter.html'">ไปต่อเลยยย~</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      coverflowEffect: {
+        rotate: 10,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      on: {
+        slideChange: function () {
+          if (swiper.activeIndex === 11) {
+            document.getElementById("final-message").style.display = "block";
+            document.getElementById("nextBtn").style.display = "inline-block";
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

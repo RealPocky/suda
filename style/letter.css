@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff0f6;
+}
+
+/* เพิ่มสไตล์สำหรับข้อความมุมซ้ายบนของกระดาษ */
+.address {
+    font-size: 30px; /* ขนาดใหญ่กว่าข้อความในจดหมาย */
+    font-weight: bold;
+    color: #ff66b2; /* สีชมพู */
+    position: absolute;
+    top: 20px;
+    left: 50%; /* จัดให้อยู่ตรงกลาง */
+    transform: translateX(-50%); /* เลื่อนกลับมาจากกลาง */
+    text-align: center;
+}
+
+/* ข้อความในจดหมาย */
+.letter p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-top: 60px; /* ปรับให้ข้อความขอโทษไม่ชนกับข้อความ "แด่คุณนางฟ้าสุดา" */
+}
+
+
+
+.container {
+    text-align: center;
+}
+
+.message p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.envelope {
+    width: 200px;
+    height: 120px;
+    margin: 0 auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.flap {
+    width: 100%;
+    height: 50%;
+    background-color: #e91e63;
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: bottom;
+    transition: transform 0.5s ease;
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+    background-color: #e91e63;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.letter {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff0f6;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff5498;
+}

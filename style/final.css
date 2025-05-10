@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.swal2-icon {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.message p {
+    font-size: 30px;
+    color: #ff66b2;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+/* เพิ่ม transition ให้กับปุ่ม */
+.reconcile-btn, .not-reconcile-btn {
+    transition: transform 0.5s ease;  /* เพิ่ม transition ให้การขยายหรือย่อขนาดค่อยๆ เกิดขึ้น */
+}
+.couple-pic {
+  width: 200px;
+  border-radius: 20px;
+  margin-bottom: 0px; /* เดิม 15px → ลดเหลือ 5px */
+}
+
+
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+.reconcile-btn {
+    background-color: #ff66b2;
+    color: white;
+}
+
+.not-reconcile-btn {
+    background-color: #ff99cc;
+    color: white;
+}
+
+.reconcile-btn:hover {
+    background-color: #ff3385;
+}
+
+.not-reconcile-btn:hover {
+    background-color: #ff66b2;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.heart {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.heart img {
+    max-width: 100px;
+    transition: all 0.5s ease;
+}
